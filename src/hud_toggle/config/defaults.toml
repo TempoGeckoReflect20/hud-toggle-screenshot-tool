@@ -1,0 +1,45 @@
+# Default HUD rules shipped with hud-toggle-screenshot-tool.
+# Rules are matched top-to-bottom; first match wins per window.
+
+[guard]
+hold_seconds = 3.0
+restore_on_exit = true
+poll_ms = 250
+
+[hotkeys]
+toggle = "ctrl+alt+h"
+toggle_once = "ctrl+alt+s"
+quit = "ctrl+alt+q"
+
+# Each rule matches a HUD window. `title_re` is a Python regex run
+# against the window title; `process` is an exact, case-insensitive
+# process name (no .exe). Leave `process` empty to match any process.
+[[hud_rules]]
+name = "steam-overlay"
+process = "gameoverlayui"
+title_re = "(?i)steam"
+action = "hide"
+
+[[hud_rules]]
+name = "discord-overlay"
+process = "discord"
+title_re = "(?i)discord.*overlay"
+action = "hide"
+
+[[hud_rules]]
+name = "obs-preview"
+process = "obs64"
+title_re = "(?i)obs.*preview"
+action = "hide"
+
+[[hud_rules]]
+name = "rtss-overlay"
+process = "rtss"
+title_re = "(?i)rtss|rivatuner"
+action = "hide"
+
+[[hud_rules]]
+name = "msi-afterburner"
+process = "msiafterburner"
+title_re = "(?i)afterburner.*osd"
+action = "hide"
