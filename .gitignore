@@ -1,0 +1,47 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# HUD runtime artifacts
+hud_toggle/logs/*.log
+hud_toggle/captures/
+*.hudcache
+*.png
+*.bmp
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Local config overrides
+hud_toggle/config/local.toml
+hud_toggle/config/*.local.toml
